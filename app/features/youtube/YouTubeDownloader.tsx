@@ -50,12 +50,8 @@ export default function YouTubeDownloader() {
 
   return (
     <div className="min-h-screen flex flex-col items-center bg-warmWhite">
-      <div className="bg-white p-8 mt-20 rounded-lg shadow-lg w-full max-w-md">
-        <h1 className="text-3xl md:text-4xl font-extrabold text-center mb-6 text-gray-900 
-               bg-gradient-to-r from-red-500 via-gray-800 to-blue-500 
-               text-transparent bg-clip-text drop-shadow-lg">
-          YouTube Video Downloader
-        </h1>
+      <div className="bg-white p-8 mt-5 rounded-lg shadow-lg w-full max-w-md">
+        
 
         {/* Show Form Only If No Download Link */}
         {!downloadLink ? (

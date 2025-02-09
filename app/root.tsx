@@ -21,7 +21,7 @@ export const links: LinksFunction = () => [
   },
   {
     rel: "stylesheet",
-    href: "https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap",
+    href: "https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&display=swap",
   },
 ];
 
@@ -34,10 +34,11 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="flex flex-col min-h-screen">
         <ReactQueryProvider>
           <Header />
-          {children}
+          {/* Main content between header and footer */}
+          <main className="flex-grow">{children}</main>
           <Footer />
           <ScrollRestoration />
           <Scripts />
@@ -48,16 +49,5 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return (
-    <html lang="en">
-      <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>BinancePe</title>
-      </head>
-      <body>
-        <Outlet />
-      </body>
-    </html>
-  );
+  return <Outlet />;
 }
